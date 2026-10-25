@@ -1,0 +1,28 @@
+BRIGHTSTEPS HAVEN - PARENT LOGIN/SIGNUP
+
+Included:
+- Parent signup and login API
+- Parent session check and logout API
+- Parent login/signup popup on public pages
+- Admin route remains separate at /admin
+- Existing appointment and contact routes are retained
+
+SETUP:
+1. Copy backend/config.env.example to backend/config.env.
+2. Fill in your own MongoDB, session, admin, and email values.
+3. In a terminal, open backend and run: npm install
+4. Run backend: npm run dev
+5. In another terminal, open frontend and run: npm install
+6. Run frontend: npm run dev
+7. Open http://localhost:5173
+
+PARENT POPUP:
+- When no parent session exists, the popup should appear on public pages.
+- After successful signup/login, the popup closes and the session is saved.
+- A returning parent should use Log in with the same email and password.
+- The /admin page does not show the parent popup.
+
+SECURITY:
+The original backend/config.env has been excluded from this ZIP so private credentials are not shared.
+Create it from config.env.example and enter your own values.
+node_modules folders have been excluded; npm install restores dependencies.
