@@ -4725,7 +4725,7 @@ body {
     position: absolute;
     z-index: -3;
     inset: -7% 0;
-    background-image: url('https\://images.unsplash.com/photo-1471286174890-9c112ffca5b4?auto=format&fit=crop&w=2000&q=90');
+    background-image: url("https://images.unsplash.com/photo-1471286174890-9c112ffca5b4");
     background-position: center 45%;
     background-size: cover;
     background-attachment: fixed;
@@ -5124,7 +5124,7 @@ body {
     position: relative;
     isolation: isolate;
     overflow: hidden;
-    background: linear-gradient(110deg, rgba(224, 201, 159, .52), rgba(248, 245, 238, .96) 68%), url('https\://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?auto=format&fit=crop&w=1800&q=85') center 42%/cover fixed;
+    background: linear-gradient(110deg, rgba(224, 201, 159, .52), rgba(248, 245, 238, .96) 68%), url('https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?auto=format&fit=crop&w=1800&q=85') center 42%/cover fixed;
     padding: 64px 0
 }
 
@@ -5146,9 +5146,8 @@ body {
 }
 
 .parallax-backdrop {
-    background-image: url('https\://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?auto=format&fit=crop&w=2000&q=90')
+    background-image: url('https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?auto=format&fit=crop&w=2000&q=90')
 }
-
 .parallax-overlay {
     background: linear-gradient(90deg, rgba(43, 48, 37, .91), rgba(43, 48, 37, .73) 50%, rgba(43, 48, 37, .26))
 }
