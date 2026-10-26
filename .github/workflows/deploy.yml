@@ -1,0 +1,50 @@
+﻿name: Deploy BrightSteps Haven
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Install dependencies
+        working-directory: Brightsteps/BrightSteps_Haven_No_data_js/frontend
+        run: npm install
+
+      - name: Build website
+        working-directory: Brightsteps/BrightSteps_Haven_No_data_js/frontend
+        run: npm run build
+
+      - name: Upload website
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: Brightsteps/BrightSteps_Haven_No_data_js/frontend/dist
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+    steps:
+      - name: Publish website
+        uses: actions/deploy-pages@v4
